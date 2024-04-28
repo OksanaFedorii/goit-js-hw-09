@@ -1,0 +1,68 @@
+.feedback-form {
+    max-width: 408px;
+    margin: 50px auto; 
+    padding: 24px; 
+    border: 1px solid #eaeaea;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.feedback-form textarea {
+    height: 80px;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+    border: 1px solid #000000;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    border: 1px solid #7f7f7f;
+} 
+
+.feedback-form button {
+    display: block;
+    width: 95px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4E75FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.feedback-form button:hover {
+    background-color: #6C8CFF;
+    outline: none;
+    ;
+}
+
+.feedback-form:focus {
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    outline-width: 0;
+}
+
