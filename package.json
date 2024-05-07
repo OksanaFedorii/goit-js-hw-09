@@ -5,7 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+<<<<<<< HEAD
     "build": "vite build --base=/<GOIT-JS-HW-09>/",
+=======
+    "build": "vite build --base=/<REPO>/",
+>>>>>>> 938d4e7f15fae90a1c66896a3c42c5da16e1eabb
     "preview": "vite preview"
   },
   "devDependencies": {
