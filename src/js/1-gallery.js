@@ -67,28 +67,35 @@ import "simplelightbox/dist/simple-lightbox.min.css";
       },
     ];
     
-    const gallery = document.querySelector(".gallery");
-    
-    images.forEach(image => {
-      const listItem = document.createElement("li");
-      listItem.classList.add("gallery-item");
-    
-      const link = document.createElement("a");
-      link.classList.add("gallery-link");
-      link.href = image.original;
-    
-      const img = document.createElement("img");
-      img.classList.add("gallery-image");
-      img.src = image.preview;
-      img.alt = image.description;
+const gallery = document.querySelector(".gallery");
 
-    
-      link.appendChild(img);
-      listItem.appendChild(link);
-      gallery.appendChild(listItem);
-    });
+const galleryItems = images.map(image => {
+  const listItem = document.createElement("li");
+  listItem.classList.add("gallery-item");
 
-    var lightbox = new SimpleLightbox('.gallery a', {overlayOpacity: 1, captionsData: 'alt'});
+  const link = document.createElement("a");
+  link.classList.add("gallery-link");
+  link.href = image.original;
+
+  const img = document.createElement("img");
+  img.classList.add("gallery-image");
+  img.src = image.preview;
+  img.alt = image.description;
+
+  link.appendChild(img);
+  listItem.appendChild(link);
+
+  return listItem;
+});
+
+const itemsArray = Array.from(galleryItems);
+
+
+itemsArray.forEach(item => {
+  gallery.appendChild(item);
+});
+
+var lightbox = new SimpleLightbox('.gallery a', {overlayOpacity: 1, captionsData: 'alt',  captionsDelay: 250});
 
 
 
